@@ -1,0 +1,15 @@
+name: yarn-snap-test
+version: '1.0.0'
+summary: Testing that yarn works on build.snapcraft.io
+description: |
+  Nothing to see here
+
+grade: devel
+confinement: devmode
+
+parts:
+  grunt:
+    plugin: nodejs
+    node-package-manager: yarn
+    build: |
+      ./node_modules/.bin/grunt --help
